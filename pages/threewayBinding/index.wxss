@@ -1,0 +1,22 @@
+.registerPage{
+  margin-top: 80rpx;
+  padding: 0 30rpx;
+}
+.int{
+  display: flex;
+  align-items:center;
+  border-bottom: 1px solid #ccc;
+}
+.int .label{
+  display: inline-block;
+  width: 170rpx;
+}
+.int .intVal{
+  flex: 1;
+}
+.vcode-btn{
+  font-size:30rpx;
+}
+.int .int-txt{
+  padding-left: 30rpx;
+}

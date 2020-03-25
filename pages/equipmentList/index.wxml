@@ -1,0 +1,51 @@
+<view class="tipsBox">
+  <view class="optBox">
+    <form bindsubmit="getEquipment" report-submit='true'>
+      <button class="weui-btn mini-btn sysGetSb" size="mini" form-type='submit'>扫码领设备</button>
+    </form>
+  </view>
+  <view class="txtToltal">
+    使用中
+    <view class="userNumber">{{dataNumber.inUsered}}</view>台,该订单共
+    <view class="totalNumber">{{dataNumber.totalAmount}}</view>台
+  </view>
+</view>
+<view class="tr table_header">
+  <view class="th">设备号</view>
+  <view class="th ">领取状态</view>
+  <!-- <view class="th ">投放类型</view> -->
+</view>
+<view class="g-doc table" hidden="{{loadingStatus}}">
+  <view class="g-bd">
+    <!-- layer-top 等同于 g-hd的高度 -->
+    <!-- <view class="layer-top"></view>   -->
+    <block wx:if="{{dataList.length}}">
+      <view class="list" wx:for="{{dataList}}" wx:key="*this">
+        <view class="tr table_main">
+          <view class="td">{{item.devicePhoneNum}}</view>
+          <view class="td">{{item.odrmStatusName}}</view>
+        </view>
+      </view>
+      <!-- 加载条 start -->
+      <view class="weui-loadmore" hidden="{{!loadBar.Loading}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">加载中</view>
+      </view>
+      <view class="weui-loadmore" hidden="{{loadBar.Loading}}">
+        <view class="weui-loadmore__tips" hidden='{{!loadBar.more}}'>加载更多</view>
+        <!-- <view class="weui-loadmore__tips" hidden='{{loadBar.more}}'>没有更多了</view> -->
+      </view>
+      <!-- 加载条 end -->
+    </block>
+    <block wx:else>
+      <view class='noData'>
+        暂无记录
+      </view>
+    </block>
+    <!-- layer-top 等同于 g-ft 的高度 -->
+
+    <view class="layer-bottom"></view>
+
+  </view>
+</view>
+<wxc-loading is-show="{{loadingStatus}}" type="mgj"></wxc-loading>

@@ -1,0 +1,130 @@
+page {
+  height: 100%;
+}
+
+.container {
+  background-color: #f5f5f9;
+  justify-content: initial;
+}
+
+.form-box {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.row-wrap {
+  width: 720rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  font-size: 28rpx;
+  /*justify-content: space-between;*/
+}
+
+.row-wrap .label {
+  width: 174rpx;
+  color: #000;
+}
+
+.row-wrap .label-right {
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.row-wrap .label-right input {
+  height: 100%;
+  font-size: 28rpx;
+  padding-right: 30rpx;
+}
+
+.row-wrap .right-box {
+  margin-right: 30rpx;
+}
+
+.arrow-right {
+  width: 15rpx;
+  height: 24rpx;
+}
+
+.save-btn {
+  margin: 60rpx 0 30rpx;
+}
+
+button[type="default"] {
+  background-color: #fff;
+  color: #000;
+}
+
+.addr-details {
+  height: auto;
+  padding: 30rpx 0;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  font-size: 28rpx;
+  align-items: center;
+}
+
+.addr-details .label {
+  margin: auto 0 auto 0;
+  width: 174rpx;
+  color: #000;
+
+}
+
+.addr-details textarea {
+  box-sizing: border-box;
+  width: 480rpx;
+  overflow: scroll;
+}
+.addr-details .label-right textarea{
+  
+}
+picker {
+  min-width: 20rpx;
+  height: 100%;
+  margin-right: 20rpx;
+}
+
+.hui {
+  color: #777;
+}
+
+.btn-box {
+  margin: 0 30rpx;
+}
+
+.mrdz .label-right {
+  text-align: right;
+}
+
+.titleBox {
+  position: relative;
+}
+
+.titleBox .icon-del {
+  color: red;
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  height:88rpx;
+  line-height: 88rpx;
+  padding: 0 30rpx;
+}
+
+.titleBox .title {
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  justify-content: center;
+}
+.row-wrap .pickerLocal{
+  flex: 1;
+}

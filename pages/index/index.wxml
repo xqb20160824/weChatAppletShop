@@ -1,0 +1,43 @@
+<view class='container'>
+  <view class="card-container-2">
+    <view class="card-holder">
+      <view class="coupons-item" wx:if="{{bannerPic}}" wx:for="{{bannerPic}}" wx:key="xxx">
+        <view class="card" wx:if="{{bannerPic.length==1}}">
+            <image src="{{item.url}}" ></image>
+        </view>
+        <view class="card" wx:else>
+            <image src="{{item.url}}" animation="{{num==index?showpic:hidepic}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='hotcity'  wx:if="{{hotCity}}">
+    <text class='title'>热门目的地</text>
+    <block wx:for="{{hotCity}}" wx:for-item="item" wx:key="xxx">
+      <view class="coupons-item" bindtap="tapBanner" data-categoryid="{{item.categoryId}}">
+        <view class="swiper-container" wx:if='{{item.mediaList.length>1}}'>
+          <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange" data-index="{{index}}">
+            <block wx:for="{{item.mediaList}}" wx:key="id" wx:for-item="bannerItem">
+              <swiper-item>
+                <image mode="scaleToFill" src="{{bannerItem.url}}" class="slide-image" width="750rpx" height="562.5rpx" />
+              </swiper-item>
+            </block>
+          </swiper>
+          <view class="dots">
+            <block wx:for="{{item.mediaList}}" wx:key="unique" wx:for-item="bannerItem">
+              <view class="dot{{index == item.swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+          </view>
+        </view>
+        <view class="swiper-container" wx:else>
+          <image src="{{item.mediaList[0].url}}" mode="widthFix" class="slide-image"/>
+        </view>
+        <view class='text'>
+          <view class="locale">{{item.categoryName}}</view>
+          <view class="price">￥{{item.cheapestValues}}</view>
+          <view class='dayDw'>{{item.categoryUnit}}起</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

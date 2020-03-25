@@ -1,0 +1,54 @@
+<!--pages/refund/index.wxml-->
+<view class='order-details'>
+  <view class='order-info'>
+    <view class='item'>
+      翻译机
+    </view>
+    <view class='item'>
+      <view class='label'>
+        套餐类型
+      </view>
+      <view class='values'>
+        {{order.addonsName}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        租用台数
+      </view>
+      <view class='values'>
+        {{order.itemAmount}}台
+      </view>
+    </view>
+    <view class="tipsDh">
+      请在下方填上物流单号：
+    </view>
+    <block wx:for-items="{{wlData}}" wx:key="{{index}}">
+      <!-- <view bindtap="statusTap" data-index="{{index}}" data-status="{{item.orderStatus}}" class="item_list {{index == currentType ? 'active' : ''}}">
+        {{item.txt}}
+      </view> -->
+      <view class='item wlbh'>
+        <view class='label'>
+          快递单号{{index}}：
+        </view>
+        <view class="wldhText">
+          <view class='values'>
+            <input class="weui-input wl-int" disabled="{{item.osbId?true:false}}" bindinput="handleInput" data-index="{{index}}" placeholder="请输入物流编号" value="{{item.sendBackNum}}" />
+          </view>
+        </view>
+        <view class="btn-opt">
+          <button size="mini" class="btn del" bindtap="handleDel" data-index="{{index}}" data-osbId="{{item.osbId}}">删除</button>
+          <button size="mini" class="btn smlsb tijiao" bindtap="handleAdd" data-index="{{index}}" data-osbId="{{item.osbId}}" hidden="{{item.osbId?true:false}}">提交</button>
+          <button size="mini" class="themeBackgroundColor" bindtap="scanErwm" data-index="{{index}}" hidden="{{item.osbId?true:false}}">扫描单号二维码</button>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+</view>
+<view class='optButton' hidden="{{order.itemAmount<=wlData.length?true:false}}">
+  <view class="btn-group">
+    <button class="smlsb btn" size="mini" bindtap="bindSb">添加物流单号</button>
+  </view>
+</view>

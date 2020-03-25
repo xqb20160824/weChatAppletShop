@@ -1,0 +1,92 @@
+.container {
+  background-color: #f2f2f2;
+}
+
+.address-list {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-bottom: 100rpx;
+}
+
+.address-list .a-address {
+  width: 720rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.a-address .left-text {
+  width: 610rpx;
+  box-sizing: border-box;
+  padding-left: 58rpx;
+}
+
+.a-address .icon-selected {
+  color: red;
+  font-weight: 600;
+  position: absolute;
+}
+
+.a-address .left-text .name-tel {
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: flex-end;
+}
+
+.a-address .left-text .name-tel .userName {
+  padding-right: 20rpx;
+}
+.a-address .left-text .name-tel .userPhone{
+  color: #888;
+  font-size: 30rpx;
+}
+.a-address .left-text .address-box {
+  font-size: 30rpx;
+  color: #888;
+  line-height: 36rpx;
+  display: flex;
+  text-align: left;
+}
+.a-address .left-text .address-box .label{
+  width: 150rpx;
+}
+.a-address .left-text .address-box .detail{
+  flex: 1;
+  text-align: left;
+}
+
+.a-address .right-edit {
+  width: 109rpx;
+  height: 100%;
+  padding: 50rpx 0 50rpx 58rpx;
+  box-sizing: border-box;
+  background: url(https://cdn.it120.cc/images/weappshop/addr-edit.png) no-repeat 43rpx center;
+  background-size: 35rpx auto;
+}
+
+.bottom-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+}
+
+.bottom-box .add-btn {
+  font-size: 28rpx;
+  width: 90%;
+  margin: 30rpx 5%;
+  padding: 10rpx 0;
+}
+
+.address-list {
+  text-align: center;
+}
+.noData{
+  margin-top: 100rpx;
+  font-size: 28rpx;
+}

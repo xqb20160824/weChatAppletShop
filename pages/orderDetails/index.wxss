@@ -1,0 +1,89 @@
+.order-details {
+  padding: 30rpx;
+  font-size: 35rpx;
+}
+
+.order-details .order-info .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.order-details .order-info .item .label{
+  width: 200rpx;
+}
+.order-details .order-info .item  .values{
+  text-align: right;
+  flex: 1;
+}
+
+.totalTxt {
+  padding: 50rpx 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 40rpx;
+}
+
+.noDetails {
+  text-align: center;
+  margin-top: 400rpx;
+  color: #ccc;
+}
+
+.order-status {
+  color: #00afb4;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+
+.moneyTxt {
+  color: red;
+  font-weight: 600;
+}
+.optButton{
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+}
+.rePaidBox {
+  padding: 30rpx;
+  font-size: 35rpx;
+}
+
+.rePaidBox .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.vue{
+  text-align: right;
+}
+.btn-group{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-group .btn{
+  margin: 0 40rpx;
+  font-size: 40rpx;
+  flex: 1;
+}
+.smlsb{
+  background: orange;
+  color: #fff;
+}
+button[size=mini]{
+ padding: 10rpx 50rpx;
+
+}
+.toBeReturnedBox{
+  margin-top: 20rpx;
+  padding: 0 40rpx;
+}
+.addressDetails{
+  display: flex;
+  flex-direction: column;
+}
+.addressDetails .tips{
+  color: #8f8f94;
+  text-align: right;
+}

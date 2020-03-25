@@ -1,0 +1,243 @@
+.container{
+  padding: 0 30rpx;
+  background-color:#F2f2f2;
+  font-size: 30rpx;
+}
+.container form{
+  width: 100%;
+}
+.container .section{
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 40rpx;
+  padding:20rpx 30rpx;
+}
+.container .section .sectionList:last-child{
+  margin-bottom: 0;
+}
+.container .section .sectionList .red{
+  color: red;
+  font-size: 40rpx;
+}
+.container .section .title{
+  font-weight: 600;
+}
+.container .section .item{
+  display: flex;
+  justify-content: space-between
+}
+.container .section .items{
+  margin-bottom: 30rpx;
+}
+.addresList{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.addresList{
+  position: relative;
+  margin-bottom: 15rpx;
+}
+.addresList .iconfont{
+  display: none;
+  position: absolute;
+  right: 0;
+}
+.addresList.active .iconfont{
+  color: #00afb4;
+  display: flex;
+  transition:all .5s;
+}
+.selectedDate{
+  display: inline-block;
+}
+.sectionList{
+  display: flex;
+  align-content:space-between;
+  align-items: center;
+  justify-content: space-between; 
+  margin-bottom:30rpx;
+}
+.sectionList .label{
+
+}
+.sectionList .dataPicker{
+  color: #666;
+  font-size: 30rpx;
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+.sectionList .dataPicker .dataTo{
+  padding:0 10rpx;
+}
+/* 购买数量 */
+.shop-number {
+    width: 670rpx;
+    height: 120rpx;
+    padding: 20rpx 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #f2f2f2;
+    
+}
+.shop-number-left {
+    width: 220rpx;
+    height: 80rpx;
+}
+.shop-number-left-name {
+    line-height: 40rpx;
+    font-size: 34rpx;
+
+}
+.shop-number-left-desc {
+    line-height: 40rpx;
+    font-size: 22rpx;
+    color: rgb(250, 99, 39);
+
+}
+.shop-number-right {
+    width: 300rpx;
+    display: flex;
+    height: 80rpx;
+    padding: 5rpx 0;
+    box-sizing: border-box;
+}
+.shop-number-right view{
+    line-height: 70rpx;
+    height: 70rpx;
+    width: 100rpx;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1rpx solid #f2f2f2;
+}
+.shop-number-right-reduce {
+    /* background: yellow; */
+    border-radius: 10rpx 0 0 10rpx;
+    border-right: 0;
+}
+.shop-number-right-input {
+    /* background: red; */
+    border-left: 0;
+    border-right: 0;
+}
+.shop-number-right-plus {
+    /* background: goldenrod; */
+    border-radius: 0 10rpx 10rpx 0;
+    border-left: 0;
+}
+.shop-number-right-reduce,.shop-number-right-plus{
+    line-height: 60rpx !important;
+}
+.disable-btn {
+    background: #f1f1f1;
+}
+.themeBackgroundColor.getCode{
+  line-height: normal;
+  font-size:inherit;
+  margin: 0;
+  padding:14rpx;
+}
+.sectionList .yzm{
+  width: 100rpx;
+}
+.container .sectionLists{
+  margin-bottom: 400rpx;
+}
+.goToPay{
+  position: fixed;
+  background: #fff;
+  height:350rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding:0 30rpx;
+  border-top-left-radius:50rpx;
+  border-top-right-radius:50rpx;
+  box-shadow:0 -2px 3px -1px #ccc;
+}
+.goToPay .ze{
+  color: #FD3D39;
+  font-weight: 600;
+  font-size: 45rpx;
+}
+.goToPay .yj{
+  color: rgb(179, 179, 179);
+}
+.goToPay .txt{
+  display: flex;
+  align-items: center;
+  padding:50rpx 10rpx;
+} 
+.agreeXy{
+  display: flex;
+  color: #8f8f94;
+  align-items: center;
+}
+.agreeXy .xt{
+  color: #00afb4;
+}
+.icon-icon_selected_fill{
+  color: #00afb4;
+}
+.agreeXy .iconfont{
+  padding-right: 10rpx;
+}
+.agreeXy .ms{
+  display: flex;
+  align-items: center;
+}
+.sectionList.bz{
+  justify-content:left;
+  margin-bottom: 0;
+}
+.sectionList.bz .label{
+  padding-right: 15rpx;
+  width: 100rpx;
+}
+.sectionList.bz .int{
+  flex: 1;
+}
+.show-address {
+  display: flex;
+  align-items:center;
+}
+.show-address .diZhiBox{
+  padding-left: 30rpx;
+  flex: 1;
+}
+.show-address .diZhiBox .name-tel{
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.address-box .label{
+  margin-bottom: 20rpx;
+}
+.address-box .iconfont{
+  font-size: 40rpx;
+  width: 50rpx;
+}
+.tclx .title{
+  margin-bottom: 30rpx;
+}
+.tclx .item{
+  margin-bottom: 30rpx;
+}
+.tclx .item:last-child{
+  margin-bottom:0;
+}
+.zyDays{
+  color: #8f8f94;
+text-align: right;
+margin-bottom: 10rpx;
+font-size: 25rpx;
+
+}
+.addressDeails{
+  color: #8f8f94;
+  font-size: 25rpx;
+}

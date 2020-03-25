@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "选择收货地址",
+  "usingComponents": {
+    "wxc-loading": "../../dist/packages/@minui/wxc-loading/dist/index"
+  }
+}

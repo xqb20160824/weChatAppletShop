@@ -1,0 +1,93 @@
+.order-details {
+  padding: 30rpx;
+  font-size: 35rpx;
+}
+
+.order-details .order-info .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.totalTxt {
+  padding: 50rpx 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 40rpx;
+}
+
+.optButton {
+  margin-bottom: 30rpx;
+}
+
+.btn-group {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group .btn {
+  margin: 0 40rpx;
+}
+
+.smlsb {
+  background: orange;
+  color: #fff;
+}
+
+button[size=mini] {
+  padding: 10rpx 50rpx;
+}
+
+.toBeReturnedBox {
+  margin-top: 20rpx;
+  padding: 0 40rpx;
+}
+
+.wl-int {
+  border-bottom: 1px solid #ccc;
+}
+
+.order-details .order-info .wlbh {
+  display: block;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 20rpx;
+  margin-bottom: 0;
+  padding-top: 20rpx;
+}
+
+.tipsDh {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 20rpx;
+}
+
+.wlbh .label {
+  width: 200rpx;
+}
+
+.wldhText {
+  display: flex;
+}
+
+.wldhText .btn-opt {
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wldhText .values {
+  flex: 1;
+}
+
+.wldhText .btn-opt .iconfont {
+  padding: 0 20rpx;
+}
+.btn-opt{
+  padding-top:10rpx;
+  
+}
+.btn-opt .btn{
+  margin-right: 20rpx;
+}

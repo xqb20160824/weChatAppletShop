@@ -1,0 +1,184 @@
+page {
+  background: #eee;
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+  display: block;
+}
+
+.asset {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+  margin-bottom: 4px;
+}
+
+.asset .item {
+  display: flex;
+  flex-direction: column;
+  width: 375rpx;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  color: #333;
+}
+
+.asset .right {
+  border-left: 1px solid #eee;
+}
+
+.version {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 40rpx;
+}
+
+.my-item {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 14px;
+}
+
+.my-item navigator {
+  padding: 0 50rpx;
+}
+
+.my-item .ng {
+  display: flex;
+  justify-content: space-between;
+}
+.my-item .ng.navigator-hover{
+  background: none;
+} 
+.my-item .iconfont {
+  flex: right;
+  color: #c7c7cc;
+}
+
+.order-shortcut {
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+  margin-bottom: 4px;
+}
+
+.order-shortcut .item {
+  display: flex;
+  flex-direction: column;
+  width: 187rpx;
+  text-align: center;
+}
+
+.order-shortcut .item .icon {
+  width: 67rpx;
+  height: 67rpx;
+  margin-left: 60rpx;
+}
+
+.order-shortcut .item .text {
+  font-size: 12px;
+}
+
+.to-authorize {
+  border: none;
+  padding: 0rpx;
+  margin: 0rpx;
+  background: none;
+  height: auto;
+  line-height: auto;
+}
+
+/* 绑定手机号 */
+
+.bind-phone-number {
+  margin: 20rpx;
+  width: 100%;
+}
+
+.btnOpt {
+}
+.boxList{
+  background: #fff;
+  margin:100rpx 5%;
+  border-radius: 20rpx;
+}
+.navigator-hover{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.userbox {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300rpx;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(top, rgba(0, 175, 180, 1), rgba(0, 175, 180, 0.3));
+}
+
+.userbox .userSettings {
+  position: absolute;
+  font-size: 35rpx;
+  color: #ff5777;
+  right: 50rpx;
+  top: 70rpx;
+  font-weight: 600;
+  z-index: 999;
+}
+
+.smBindqy {
+  font-size: 30rpx;
+  background-color: #ff5777;
+  color: #fff;
+  padding:15rpx 18rpx;
+  line-height: initial;
+}
+
+.smBindqy:hover, .smBindqy:focus {
+  opacity: 0.9;
+}
+
+.userbox .userInfoMask {
+  width: 100%;
+  height: 350rpx;
+  z-index: 1;
+  position: relative;
+  bottom: 0rpx;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 70%;
+  background-color: #fff;
+}
+
+.userbox .userinfo {
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  z-index: 100;
+  margin-top: 100rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.userbox .userinfo .userinfo-avatar {
+  display: inline-block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx 0;
+  border: 5rpx solid #eee;
+}
+.avatar__mold--circle{
+  border-radius: 0;
+}

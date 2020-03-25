@@ -1,0 +1,233 @@
+page {
+  background-color: #f2f2f2;
+}
+
+.status-box {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.status-box .status-label {
+  width: 150rpx;
+  height: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #353535;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.status-box .status-label.active {
+  color: #e64340;
+  border-bottom: 6rpx solid #e64340;
+}
+
+.status-box .status-label .red-dot {
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  left: 116rpx;
+  top: 23rpx;
+  background-color: #f43530;
+  border-radius: 50%;
+}
+
+.no-order {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 203rpx;
+  background-color: #f2f2f2;
+}
+
+.no-order-img {
+  width: 81rpx;
+  height: 96rpx;
+  margin-bottom: 31rpx;
+}
+
+.no-order .text {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+}
+
+/* <!-- 订单信息 --> */
+
+.listBox {
+  padding: 20rpx;
+}
+
+.a-order {
+  background: #fff;
+  padding: 30rpx;
+  border-radius: 30rpx;
+}
+
+.a-order .info1 {
+  display: flex;
+  justify-content: space-between;
+  color: #989898;
+  font-size: 35rpx;
+}
+
+.a-order .info1 .orderStatus {
+  font-weight: 600;
+}
+
+.info2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info2 .tx1 {
+  flex: 1;
+}
+
+.info2 .tx1 .box1 {
+  /* display: flex; */
+  justify-content: space-between;
+}
+
+.info2 .orderpicture {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50rpx;
+  padding-right: 10rpx;
+}
+
+.info2 .textinfo {
+  flex: 1;
+  font-size: 30rpx;
+  color: #989898;
+}
+
+.info2 .price {
+  
+}
+
+.info2 .price .number {
+  color: #9c9c9c;
+  margin-top: -22rpx;
+}
+
+.info3 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.info3 .zonge {
+  font-size: 30rpx;
+  display: flex;
+  color: red;
+}
+
+.info3 .jg {
+  font-size: 32rpx;
+  color: #989898;
+}
+
+.info4 {
+  text-align: right;
+}
+
+.info4 .weui-btn {
+  margin-left: 20rpx;
+}
+
+.info4 .weui-btn.fk {
+  background: orange;
+  color: #fff;
+}
+
+.order-list .a-order {
+  margin-bottom: 40rpx;
+}
+
+.boxList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxList .item_list {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  font-size: 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx 0;
+  margin: 10rpx;
+  flex: 1;
+}
+
+.boxList .item_list.active {
+  background: orange;
+  color: #fff;
+}
+
+.scroll-view_x {
+  background: #fff;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.a-order .ngs {
+  padding: 10rpx;
+}
+
+.ngs.navigator-hover {
+  background: none;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.textinfo .timePeriod .val {
+  padding-left: 20rpx;
+}
+
+.info0 {
+  display: flex;
+  color: #989898;
+}
+
+.rePaidBox {
+  padding: 30rpx;
+  font-size: 35rpx;
+}
+
+.rePaidBox .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.toOrder{
+  margin-top: 100rpx;
+}
+.vue{
+  text-align: right;
+}
+.paidButton{
+  background: orange;
+  color: #fff;
+}
+.paidButton:hover,.paidButton:active,.paidButton:focus{
+  opacity: .8;
+}
+button[size=mini]{
+  padding: 10rpx 40rpx;
+}

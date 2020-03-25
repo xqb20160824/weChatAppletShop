@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "订单详情",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "wxc-loading": "../../dist/packages/@minui/wxc-loading/dist/index"
+  }
+}

@@ -1,0 +1,145 @@
+<view class='order-details' wx:if="{{order}}">
+  <view class='order-status'>
+    {{order.orderStatusName}}
+  </view>
+  <view class='order-info'>
+    <view class='item'>
+      翻译机
+    </view>
+    <view class='item'>
+      <view class='label'>
+        套餐类型
+      </view>
+      <view class='values'>
+        {{order.addonsName}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        目的地
+      </view>
+      <view class='values'>
+        {{order.categoryName}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        取件地址
+      </view>
+      <view class='values addressDetails'>
+        <view>{{order.address}}</view>
+        <view class="tips">({{order.addressDetails}})</view>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        租用日期
+      </view>
+      <view class='values'>
+        {{order.startDate}}至{{order.endDate}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        租用台数
+      </view>
+      <view class='values'>
+        {{order.itemAmount}}台
+      </view>
+    </view>
+    <view class='item'  wx:if='{{order.orderType=="2"?false:true}}'>
+      <view class='label'>
+        租金
+      </view>
+      <view class='values moneyTxt'>
+        ￥{{order.itemPrice}}{{order.itemUnit}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        押金
+      </view>
+      <view class='values moneyTxt'>
+        ￥{{order.itemDeposits}}元/台
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        备注
+      </view>
+      <view class='values'>
+        {{order.remarks?order.remarks:""}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        联系人姓名
+      </view>
+      <view class='values'>
+        {{order.userName}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        联系人电话
+      </view>
+      <view class='values'>
+        {{order.userPhone}}
+      </view>
+    </view>
+  </view>
+  <view class='totalTxt moneyTxt'>
+    总额：￥{{order.orderValues}}元（含押金￥{{order.orderDeposits}}元）
+  </view>
+</view>
+<!-- <view class="noDetails" wx:else>
+  该订单暂无详情，请重新查询
+</view> -->
+<wxc-loading is-show="{{loadingStatus}}" type="mgj"></wxc-loading>
+<view class='optButton'>
+  <view class="btn-group">
+    <!-- <form bindsubmit="getEquipment" report-submit='true'> -->
+      <button class="smlsb btn" size="mini" bindtap="bindSb" hidden='{{!rePaidButtonShow[order.orderStatus]}}'>取 设 备</button>
+    <!-- </form> -->
+    <button class="themeBackgroundColor btn" size="mini" bindtap='handleRePay' hidden='{{(!rePaidButtonShow[order.orderStatus])||(order.orderType=="2"?true:false)}}'>续 租</button>
+
+  </view>
+  <view class="toBeReturnedBox">
+    <button class="themeBackgroundColor btn" bindtap='toBeReturned' hidden='{{!toBeReturned[order.orderStatus]}}'>邮寄还件</button>
+  </view>
+  
+  <form bindsubmit="handlePay" report-submit='true'>
+    <button class="themeBackgroundColor" form-type='submit' hidden='{{!(order.orderStatus=="10")}}'>付 款</button>
+  </form>
+</view>
+<action-sheet class="show-popup xgShow" hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <view class='rePaidBox'>
+    <view class='item'>
+      <view class='label'>
+        续租天数：
+      </view>
+      <view class='vue'>
+        <input type='number' bindinput="handleInput" placeholder='续租天数' value="{{selectedOrder.orderDays}}"></input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        续租日期：
+      </view>
+      <view class='vue'>
+        {{(selectedOrder.startDate)}}至{{(selectedOrder.endDate)}}
+      </view>
+    </view>
+    <view class='item'>
+      <view class='label'>
+        支付：
+      </view>
+      <view class='vue'>
+        ￥{{selectedOrder.orderValues}}元
+      </view>
+    </view>
+    <form bindsubmit="toOrder" report-submit='true'>
+      <button form-type='submit' class='btn themeBackgroundColor toOrder'>下单</button>
+    </form>
+  </view>
+</action-sheet>

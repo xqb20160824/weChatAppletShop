@@ -1,0 +1,7 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='container'>
+  <!-- <view class='imgBox'>
+      <image src='../../images/fwxy.jpg'></image>
+  </view> -->
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

@@ -1,0 +1,38 @@
+<!--三方绑定-->
+<view class="registerPage">
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorText}}</view>
+  <form bindsubmit="clickSubmitBtn" report-submit="true">
+    <view class="int">
+      <view class="label">
+        <view class="weui-label">手机</view>
+      </view>
+      <view class="intVal">
+        <input name="mobilePhone" type="number" class="weui-input" placeholder="请输入手机" />
+      </view>
+    </view>
+    <view class="int">
+      <view class="label">
+        <view class="weui-label">验证码</view>
+      </view>
+      <view class="intVal">
+        <input name="verCode" class="weui-input" placeholder="请输入验证码" />
+      </view>
+      <view class="int-txt">
+        <button class="weui-btn mini-btn vcode-btn themeBackgroundColor" data-name="getCaptcha" formType='submit' disabled="{{captchaBtnIsDisabled}}">
+          {{captchaBtnIsDisabled?'倒计时'+countDown+'s':captchaText}}
+        </button>
+      </view>
+      <!-- <captcha id="captcha" wx:if="{{loadCaptcha}}" gt="{{gt}}" challenge="{{challenge}}" offline="{{offline}}" bindonSuccess="captchaSuccess"/> -->
+    </view>
+
+    <!-- <view class="int ">
+      <view class="label ">
+        <view class="weui-label ">地址</view>
+      </view>
+      <view class="intVal ">
+        <input name="address " class="weui-input " placeholder="请输入地址 " />
+      </view>
+    </view> -->
+    <button class="weui-btn themeBackgroundColor "  data-name="submit " formType='submit'>提 交</button>
+  </form>
+</view>

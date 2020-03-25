@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="address-list">
+    <block wx:if="{{dataList&&dataList.length>0}}">
+      <view class="a-address" wx:for-items="{{dataList}}" wx:key="{{index}}">
+        <view class='iconfont icon-selected' hidden="{{item.isDefault=='0'?true:false}}">
+        </view>
+        <view class="left-text {{item.isDefault=='1'? 'active':''}}" bindtap="selectTap" data-id="{{item.userAddressId}}">
+
+          <view class="name-tel">
+            <view class='userName'>
+              {{item.userName}}
+            </view>
+            <view class='userPhone'>
+              {{item.userPhone}}
+            </view>
+          </view>
+          <view class="address-box">
+            <view class='label'>
+                收货地址:
+            </view>
+            <view class='detail'>
+            {{item.userCity+item.userDistrict+item.userAddressDetails}}
+            </view>
+            
+          </view>
+        </view>
+        <view class="right-edit" bindtap="editAddess" data-id="{{item.userAddressId}}"></view>
+      </view>
+      <!-- 加载条 start -->
+      <view class="weui-loadmore" hidden="{{!loadBar.Loading}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">加载中</view>
+      </view>
+
+      <view class="weui-loadmore" hidden="{{loadBar.Loading}}">
+        <view class="weui-loadmore__tips" hidden='{{!loadBar.more}}'>加载更多</view>
+        <view class="weui-loadmore__tips" hidden='{{loadBar.more}}'>没有更多了</view>
+      </view>
+      <!-- 加载条 end -->
+    </block>
+    <block wx:else>
+      <view class='noData'>
+        暂无地址记录
+      </view>
+    </block>
+  </view>
+  <view class="bottom-box">
+    <button class="add-btn themeBackgroundColor" bindtap="addAddess">新增收货地址</button>
+  </view>
+</view>

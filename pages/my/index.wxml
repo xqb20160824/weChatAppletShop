@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- <view class="userinfo">
+    <image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+  </view> -->
+  <view class="userbox">
+    <view wx:if="{{userInfo.avatarUrl}}" class="userinfo">
+      <wxc-avatar class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"> </wxc-avatar>
+      <view class='userinfo-text'>
+        <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+      </view>
+    </view>
+    <view wx:else class="userinfo">
+      <!-- <wxc-avatar class="userinfo-avatar" mold="square" src="../../images/default.jpg" bindtap="relogin"> </wxc-avatar> -->
+       <open-data class='userinfo-avatar' type="userAvatarUrl"></open-data>
+      <view class='userinfo-text'>
+        <text class="userinfo-nickname"> 欢迎您 </text>
+      </view>
+    </view>
+    <view class='userInfoMask'></view>
+  </view>
+
+  <view class='boxList'>
+    <block wx:for="{{listItems}}" wx:key="xxx">
+      <view class="my-item">
+        <navigator class="ng" url="{{item.url}}" hover-class="navigator-hover">
+          <view class='txt'>
+            {{item.text}}
+          </view>
+          <icon class='iconfont icon-arrowright'></icon>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+    {{userMobile}}
+  </view>
+
+</view>

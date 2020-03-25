@@ -1,0 +1,120 @@
+
+
+page{
+  background: #00afb4;
+}
+.container{
+  width: 690rpx;
+  margin: 0 auto;
+}
+.hotcity .slide-image{
+  height: 401rpx;
+}
+.hotcity .swiper_box{
+  height: 401rpx;
+}
+.card-container-2[class*='card-container-'] {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  -webkit-perspective: 4rpx;
+  perspective: 4rpx;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+
+.card-container-2 {
+  color: #ff887b;
+}
+
+.card-holder {
+  height: 100%;
+}
+
+.card-holder image {
+  height: 100%;
+}
+
+.card-container-2 .controller {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: none;
+}
+
+.card-container-2 .controller.left {
+  left: 0;
+}
+
+.card-container-2 .controller.right {
+  right: 0;
+}
+
+.card-container-2 .card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.card-container-2 .card image{
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.hotcity{
+  width: 100%;
+  text-align: center;
+}
+.hotcity .title{
+  text-align: center;
+  margin:30rpx 0;
+  display:block;
+  color: #fff;
+}
+.swiper-container{
+  position: relative;
+}
+.swiper-container .dots{  
+  position: absolute;  
+  left: 0;  
+  right: 0;  
+  bottom: 20rpx;  
+  display: flex;  
+  justify-content: center;  
+}  
+.swiper-container .dots .dot{  
+  margin: 0 8rpx;  
+  width: 14rpx;  
+  height: 14rpx;  
+  background: #fff;  
+  border-radius: 50%;  
+  transition: all .6s;  
+  opacity: .5;
+}  
+.swiper-container .dots .dot.active{  
+  width: 14rpx;  
+  opacity: 1;
+}
+.hotcity .text{
+  display: inline-block;
+  padding-top:30rpx;
+}
+.hotcity .text{
+  color: #fff;
+}
+.hotcity .text view{
+  display: inline-block;
+}
+.hotcity .text .price{
+  color: #ff887b;
+  font-weight: 800;
+}
+.hotcity .coupons-item{
+  margin-bottom: 30rpx;
+}
+.slide-image{
+  width: 100%;
+}

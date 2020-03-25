@@ -1,0 +1,9 @@
+@import "/wxParse/wxParse.wxss";
+page{
+  background-color: rgb(247, 247, 247);
+}
+.container .title{
+  background: #fff;
+  padding: 30rpx 0;
+  text-align: center;
+}
